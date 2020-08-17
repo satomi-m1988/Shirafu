@@ -1,24 +1,39 @@
-# README
+# アプリ名
+Shirafu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+何かのきっかけで今までお酒loveだった人達が禁酒に踏み込み
+禁酒してみて気づいたことや、お酒に対する考え方の変化などを語り合うSNS
 
-Things you may want to cover:
+### サイトテーマ
+お酒を飲んでいた時には気付けなかったことを語り合う
+でもやっぱり飲みたいよねという本音も言ってよし！
 
-* Ruby version
+### テーマを選んだ理由
+離職中の私が再就職するまで大好きなビールを辞めてみて初めてわかった事がたくさんあったので、
+同じ気持ち（禁酒している人）の方が世の中にはいるんじゃないかと思い、
+禁酒して変わった事気づいた事良かった事をただ語り合いたいだけのSNS
 
-* System dependencies
+### ターゲットユーザ
+* 成人している方
+* 禁酒している方
+* 禁酒に興味ある方
 
-* Configuration
+### 主な利用シーン
+* 禁酒のモチベーションを上げたい時に利用する
+* 禁酒してみようかなと思った方に対して禁酒メリットを披露する
+* 自分の変化を共感してもらいたい時に利用する
+* でもお酒はやっぱり楽しいよね美味しいよねを言いたい時に利用する
 
-* Database creation
+## 設計書
 
-* Database initialization
+### 機能一覧
+https://docs.google.com/spreadsheets/d/1KaFkeQQgf9uSdL93dqrMEJNi1Fy0WabqQUw7vMhARQg/edit?usp=sharing
 
-* How to run the test suite
+## システム環境
+Rails 5.2.4.3
 
-* Services (job queues, cache servers, search engines, etc.)
+## 機能
+* Bootstrap
+* devise
 
-* Deployment instructions
-
-* ...
