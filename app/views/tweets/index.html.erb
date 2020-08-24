@@ -1,6 +1,9 @@
-<div>
-<% @tweets.each do |tweet| %>
-<%= tweet.user.name %>
-<%= tweet.body %>
-<% end %>
-</div>
+<table class="table">
+	<% @tweets.each do |tweet| %>
+		<tr>
+			<td><%= tweet.user.name %></td>
+			<td><%= tweet.body %></td>
+			<td><%= link_to'編集', edit_tweet_path(tweet.id) %></td>
+		</tr>
+	<% end %>
+</table>
