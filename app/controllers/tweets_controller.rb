@@ -5,6 +5,7 @@ class TweetsController < ApplicationController
 	end
 
 	def create
+		#@tweet = Tweet.create(tweet_params)
 		@tweet = Tweet.new(tweet_params)
 		@tweet.user_id = current_user.id
 		@tweet.save
