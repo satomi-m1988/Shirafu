@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # get 'homes/top'
   root 'homes#top'
+  get 'tweets/hashtag' => 'tweets#hashtag'
   # get 'users/index' resourcesで記述している為コメントアウト
   # get 'users/show' resourcesで記述している為コメントアウト
   # get 'users/edit' resourcesで記述している為コメントアウト
