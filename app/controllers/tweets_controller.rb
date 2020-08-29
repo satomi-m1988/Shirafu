@@ -16,6 +16,15 @@ class TweetsController < ApplicationController
 		@tweets = Tweet.all
 	end
 
+	def hashtag
+		@tag = Tag.find_by(tag_name: params[:tag_name])
+		if  @tag.present?
+			@tweets = @tag.tweets
+		else
+			@tweets = Tweet.all
+		end
+	end
+
 	def show
 	end
 
