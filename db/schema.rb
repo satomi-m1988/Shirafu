@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_08_29_041226) do
 
   create_table "comments", force: :cascade do |t|
@@ -21,6 +22,9 @@ ActiveRecord::Schema.define(version: 2020_08_29_041226) do
     t.index ["tweet_id"], name: "index_comments_on_tweet_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
+
+ActiveRecord::Schema.define(version: 2020_08_26_040128) do
+
 
   create_table "tags", force: :cascade do |t|
     t.string "tag_name"

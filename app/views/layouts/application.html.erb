@@ -10,6 +10,39 @@
   </head>
 
   <body>
+
+    <% if user_signed_in? %>
+
+      <%= link_to"Shirafu", root_path %>
+      <%= link_to tweets_path, method: :get do %>
+        <i class="fas fa-home"></i><!--ホームボタン-->
+      <% end %>
+      <%= link_to tweets_hashtag_path, method: :get do %>
+        <i class="fas fa-search"></i><!--検索ボタン-->
+      <% end %>
+      <%= link_to new_tweet_path, method: :get do %>
+        <i class="fas fa-plus-circle"></i><!--新規投稿ボタン-->
+      <% end %>
+      <%= link_to users_path, method: :get do %>
+        <i class="fas fa-user"></i><!--User一覧ボタン-->
+      <% end %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fas fa-sign-out-alt"></i><!--ログアウトボタン-->
+      <% end %>
+
+    <% else %>
+
+      <%= link_to"Shirafu", root_path %>
+      <%= link_to new_user_registration_path, method: :get do %>
+        <i class="fas fa-user-plus"></i><!--Signupボタン-->
+      <% end %>
+      <%= link_to new_user_session_path, method: :get do %>
+        <i class="fas fa-sign-in-alt"></i><!--ログインボタン-->
+      <% end %>
+
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>

@@ -1,0 +1,14 @@
+<%= form_tag(tweets_hashtag_path, method: :get) do %>
+	<%= label_tag(:tag_name, "#検索する") %>
+	<%= text_field_tag(:tag_name) %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<table class="table">
+	<% @tweets.each do |tweet| %>
+		<tr>
+			<td><%= tweet.user.name %></td>
+			<td><%= tweet.body %></td>
+		</tr>
+	<% end %>
+</table>
