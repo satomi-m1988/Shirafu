@@ -4,6 +4,8 @@ class Tweet < ApplicationRecord
 	has_many :tweet_tags
 	has_many :tags, through: :tweet_tags
 
+	has_many :comments, dependent: :destroy
+
 	after_create do
 		tags = self.body.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
 		tags.uniq.map do |t|

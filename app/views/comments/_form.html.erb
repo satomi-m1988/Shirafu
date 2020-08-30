@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+	<%= form_with model: [@tweet, @comment] do |f| %>
+		<%= f.text_area :comment_body %>
+		<%= f.submit "Shirafu Comment" %>
+	<% end %>
+<% end %>

@@ -1,1 +1,10 @@
-<h2>tweet/show.html.erb</h2>
+<table class="table">
+	<tr>
+		<td><%= @tweet.user.name %></td>
+		<td><%= @tweet.body %></td>
+	</tr>
+	<tr id="comment area">
+		<%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
+		<%= render partial: 'comments/form', locals: { comment: @comment, item: @item } %><!--コメント入力フォームの部分テンプレート -->
+	</tr>
+</table>
