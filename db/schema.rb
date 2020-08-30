@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2020_08_29_041226) do
+ActiveRecord::Schema.define(version: 2020_08_30_031252) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment_body"
@@ -22,9 +21,6 @@ ActiveRecord::Schema.define(version: 2020_08_29_041226) do
     t.index ["tweet_id"], name: "index_comments_on_tweet_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
-
-ActiveRecord::Schema.define(version: 2020_08_26_040128) do
-
 
   create_table "tags", force: :cascade do |t|
     t.string "tag_name"
@@ -57,6 +53,11 @@ ActiveRecord::Schema.define(version: 2020_08_26_040128) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_id"
+    t.text "introduction"
+    t.text "history"
+    t.text "favorite_alcohol"
+    t.boolean "adult"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
