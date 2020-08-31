@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'relationships/create'
+  get 'relationships/destroy'
   # get 'comments/create'
   # get 'comments/destroy'
   # get 'homes/top'
