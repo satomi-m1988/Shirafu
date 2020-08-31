@@ -3,9 +3,10 @@
 		<% unless comment.id.nil? %>
 			<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
 			<%= comment.comment_body %>
-		<% end %>
-	<% end %>
 
-	<% if @comment.user == current_user %>
-		<%= link_to 'コメントを削除', tweet_comments_path(comment.tweet_id, comment.id), method: :delete, remote: true %>
+		<% unless comment.user == current_user %>
+			<%= link_to 'コメントを削除', tweet_comment_path(@tweet.id, comment.id), method: :delete, remote: true %>
+		<% end %>
+
+		<% end %>
 	<% end %>
