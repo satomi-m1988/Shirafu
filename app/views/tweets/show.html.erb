@@ -1,10 +1,7 @@
-<table class="table">
-	<tr>
-		<td><%= @tweet.user.name %></td>
-		<td><%= @tweet.body %></td>
-	</tr>
-	<tr id="comment area">
-		<%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
-		<%= render partial: 'comments/form', locals: { comment: @comment, item: @item } %><!--コメント入力フォームの部分テンプレート -->
-	</tr>
-</table>
+
+<%= @tweet.user.name %>
+<%= @tweet.body %>
+
+
+<%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
+<%= render partial: 'comments/form', locals: { comment: @comment, tweet: @tweet } %><!--コメント入力フォームの部分テンプレート -->

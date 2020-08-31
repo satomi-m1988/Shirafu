@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
+    @tweet = Tweet.find(params[:tweet_id])
     @comment.destroy
     render :index
   end
