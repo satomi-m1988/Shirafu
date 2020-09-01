@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'favorites/create'
+  # get 'favorites/destroy'
   # get 'relationships/create'
   # get 'relationships/destroy'
   # get 'comments/create'
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :tweets do
+    resource :favorites, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
   end
   resources :users do
