@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+	<% if tweet.favorited_by?(current_user) %>
+		<%= link_to "いいねを外す", tweet_favorites_path(tweet.id), method: :delete, remote: true %>
+	<% else %>
+		<%= link_to "いいねをする", tweet_favorites_path(tweet.id), method: :post, remote: true %>
+	<% end %>
+<% end %>
