@@ -1,11 +1,13 @@
 <%= attachment_image_tag @user, :image, :fill, 100, 100, format: 'jpg' %><br>
 <span>名前</span>
-<%= @user.name %><br>
+	<%= @user.name %><br>
 <span>自己紹介</span>
-<%= @user.introduction %><br>
+	<%= @user.introduction %><br>
 <span>禁酒歴</span>
-<%= @user.history %><br>
+	<%= @user.history %><br>
 <span>好きなお酒</span>
-<%= @user.favorite_alcohol %><br>
-<%= link_to'Edit', edit_user_path(@user) %>
+	<%= @user.favorite_alcohol %><br>
+<% if @user == current_user %>
+	<%= link_to'Edit', edit_user_path(@user) %>
+<% end %>
 
