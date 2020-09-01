@@ -4,6 +4,7 @@ class Tweet < ApplicationRecord
 	has_many :tweet_tags
 	has_many :tags, through: :tweet_tags
 
+	has_many :favorites, dependent: :destroy
 	has_many :comments, dependent: :destroy
 
 	after_create do
