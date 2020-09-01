@@ -9,7 +9,9 @@
 				</div>
 			</td>
 			<td><%= link_to'編集', edit_tweet_path(tweet.id) %></td>
+		<% if tweet.user == current_user %>
 			<td><%= link_to "Destroy", tweet_path(tweet), method: :delete %></td>
+		<% end %>
 		</tr>
 	<% end %>
 </table>
