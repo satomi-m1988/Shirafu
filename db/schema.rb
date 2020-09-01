@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_022008) do
+ActiveRecord::Schema.define(version: 2020_09_01_070742) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment_body"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_022008) do
     t.text "introduction"
     t.text "history"
     t.text "favorite_alcohol"
-    t.boolean "adult"
+    t.string "adult"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
