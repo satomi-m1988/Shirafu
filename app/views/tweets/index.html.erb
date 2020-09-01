@@ -8,6 +8,7 @@
 					<%= render partial: 'favorites/favorite', locals: { tweet: tweet } %>
 				</div>
 			</td>
+			<td><%= link_to'ツイートを見る', tweet_path(tweet.id) %></td>
 			<td><%= link_to'編集', edit_tweet_path(tweet.id) %></td>
 		<% if tweet.user == current_user %>
 			<td><%= link_to "Destroy", tweet_path(tweet), method: :delete %></td>

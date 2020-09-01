@@ -2,6 +2,7 @@
 <%= @tweet.user.name %>
 <%= @tweet.body %>
 
-
+<div id="comments_area">
 <%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
 <%= render partial: 'comments/form', locals: { comment: @comment, tweet: @tweet } %><!--コメント入力フォームの部分テンプレート -->
+</div>
