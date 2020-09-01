@@ -2,7 +2,7 @@
 	<% @users.each do |user| %>
 		<tr>
 			<td><%= attachment_image_tag user, :image %></td>
-			<td><%= user.name %></td>
+			<td><%= link_to user.name, user_path(user) %></td>
 			<td><%= render partial: 'relationships/create' , locals: { user: user } %></td>
 			<td><%= link_to'SHOW', user_path(user) %></td>
 		</tr>
