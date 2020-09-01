@@ -7,7 +7,7 @@
 <table class="table">
 	<% @tweets.each do |tweet| %>
 		<tr>
-			<td><%= tweet.user.name %></td>
+			<td><%= link_to tweet.user.name, user_path(tweet.user) %></td>
 			<td><%= tweet.body %></td>
 		</tr>
 	<% end %>
