@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-	background-color: gray;
+.test {
+	font-size: 200px;
+	color: #2196F3;
+	/* position: relative; */
+	animation: anime 2s 0s linear infinite;
+}
+
+@keyframes anime {
+	0% {
+		color: #f00;
+	}
+	50% {
+		color: #4caf50;
+	}
+	100% {
+		color: #2196F3;
+	}
 }
