@@ -1,4 +1,7 @@
 class HomesController < ApplicationController
-  def top
-  end
+	# layout "top.html.erb"
+	def top
+		# render layout: false
+	end
+
 end
