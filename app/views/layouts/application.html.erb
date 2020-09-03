@@ -11,36 +11,55 @@
 
   <body>
 
-    <% if user_signed_in? %>
+    <div class="container-fluid", style="height: 100px;">
 
-      <%= link_to"Shirafu", root_path %>
-      <%= link_to tweets_path, method: :get do %>
-        <i class="fas fa-home"></i><!--ホームボタン-->
-      <% end %>
-      <%= link_to tweets_hashtag_path, method: :get do %>
-        <i class="fas fa-search"></i><!--検索ボタン-->
-      <% end %>
-      <%= link_to new_tweet_path, method: :get do %>
-        <i class="fas fa-plus-circle"></i><!--新規投稿ボタン-->
-      <% end %>
-      <%= link_to users_path, method: :get do %>
-        <i class="fas fa-user"></i><!--User一覧ボタン-->
-      <% end %>
-      <%= link_to destroy_user_session_path, method: :delete do %>
-        <i class="fas fa-sign-out-alt"></i><!--ログアウトボタン-->
+      <div class="row">
+          <% if user_signed_in? %>
+        <div class="col-md-4", style="padding: 10px;">
+            <span style="font-size: 50px;"><%= link_to"Shirafu", root_path %></span>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-3", style="font-size: 30px; padding-top: 10px;">
+            <div style="float: left; padding: 15px;">
+              <%= link_to tweets_path, method: :get do %><i class="fas fa-home"></i><% end %>
+            </div><!--ホームボタン-->
+            <div style="float: left; padding: 15px;">
+            <%= link_to tweets_hashtag_path, method: :get do %><i class="fas fa-search"></i><% end %>
+            </div><!--検索ボタン-->
+            <div style="float: left; padding: 15px;">
+            <%= link_to new_tweet_path, method: :get do %><i class="fas fa-plus-circle"></i><% end %>
+            </div><!--新規投稿ボタン-->
+            <div style="float: left; padding: 15px;">
+            <%= link_to users_path, method: :get do %><i class="fas fa-user"></i><% end %>
+            </div><!--User一覧ボタン-->
+            <div style="float: left; padding: 15px;">
+            <%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"></i><% end %>
+            </div><!--ログアウトボタン-->
+        </div>
+      </div>
+    </div>
+
+
+      <% else %>
+    <div class="container-fluid", style="height: 100px;">
+      <div class="row">
+        <div class="col-md-4", style="padding: 10px;">
+          <span style="font-size: 50px;"><%= link_to"Shirafu", root_path %></span>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2", style="font-size: 30px; padding-top: 10px;">
+          <div style="float: left; padding: 15px;">
+            <%= link_to new_user_registration_path, method: :get do %><i class="fas fa-user-plus"></i><% end %>
+          </div><!--Signupボタン-->
+          <div style="float: left; padding: 15px;">
+            <%= link_to new_user_session_path, method: :get do %><i class="fas fa-sign-in-alt"></i><% end %>
+          </div><!--ログインボタン-->
+        </div>
+      </div>
+
       <% end %>
 
-    <% else %>
-
-      <%= link_to"Shirafu", root_path %>
-      <%= link_to new_user_registration_path, method: :get do %>
-        <i class="fas fa-user-plus"></i><!--Signupボタン-->
-      <% end %>
-      <%= link_to new_user_session_path, method: :get do %>
-        <i class="fas fa-sign-in-alt"></i><!--ログインボタン-->
-      <% end %>
-
-    <% end %>
+    </div>
 
     <%= yield %>
 
