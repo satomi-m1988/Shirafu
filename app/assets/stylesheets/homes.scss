@@ -39,7 +39,8 @@
 }
 
 #site_name {
-	padding-top: 200px;
+	padding: 200px;
+	text-align: center;
 }
 
 /*-----ここからサイト名前のアニメーション記述-----*/
@@ -67,6 +68,9 @@
 }
 
 #attribute_item_box {
+	padding-top: 400px;
+	padding-left: 10px;
+	text-align: center;
 	overflow:hidden; /*左のdivに入り込む事を防ぐ記述*/
 }
 
@@ -74,8 +78,12 @@
 	font-size: 40px;
 }
 
-#attribute_item {
+#attribute_item1 {
 	font-size: 18px;
+}
+
+#attribute_item2 {
+	font-size: 40px;
 }
 
 #button {
