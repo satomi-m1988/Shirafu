@@ -26,7 +26,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-    <%= f.check_box :adult ,{checked: true}, "true", "false" %>
+    <%= label_tag :adult, '２０歳以上の方はチェックしてください' %>
+    <%= check_box_tag :adult, include_hidden: false %>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
