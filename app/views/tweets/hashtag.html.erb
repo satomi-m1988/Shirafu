@@ -1,5 +1,5 @@
 <%= form_tag(tweets_hashtag_path, method: :get) do %>
-	<%= label_tag(:tag_name, "#検索する") %>
+	<%= label_tag(:tag_name, "#タグで探す") %>
 	<%= text_field_tag(:tag_name) %>
 	<%= submit_tag("Search") %>
 <% end %>
