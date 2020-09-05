@@ -15,7 +15,7 @@ class TweetsController < ApplicationController
 	end
 
 	def index
-		@tweets = Tweet.all
+		@tweets = Tweet.all.page(params[:page]).per(6)
 	end
 
 	def hashtag
@@ -23,7 +23,7 @@ class TweetsController < ApplicationController
 		if  @tag.present?
 			@tweets = @tag.tweets
 		else
-			@tweets = Tweet.all
+			@tweets = Tweet.all.page(params[:page]).per(8)
 		end
 	end
 
