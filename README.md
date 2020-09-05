@@ -37,4 +37,4 @@ Rails 5.2.4.3
 * Bootstrap
 * devise
 * 非同期通信(ajax)
-* タグ付け機能　gem:acts-as-taggable-on
+* タグ付け機能(DBにて実装)
