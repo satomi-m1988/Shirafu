@@ -1,4 +1,12 @@
-<%= form_for(@tweet) do |f| %>
-	<%= f.text_area :body %>
-	<%= f.submit 'Shirafuru' %>
-<% end %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6" id="image_newtweet"></div>
+		<div class="col-md-6" style="text-align: center; padding-top: 200px; height: 700px;">
+			<h2 style="text-align: left">#NO ALCOHOLとは？</h2>
+			<%= form_for(@tweet) do |f| %>
+				<%= f.text_area :body, style:"width: 400px; height: 100px;" %>
+				<%= f.submit 'Shirafuru', class:"btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>

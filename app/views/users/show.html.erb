@@ -1,13 +1,26 @@
-<%= attachment_image_tag @user, :image, :fill, 100, 100, format: 'jpg' %><br>
-<span>名前</span>
-	<%= @user.name %><br>
-<span>自己紹介</span>
-	<%= @user.introduction %><br>
-<span>禁酒歴</span>
-	<%= @user.history %><br>
-<span>好きなお酒</span>
-	<%= @user.favorite_alcohol %><br>
-<% if @user == current_user %>
-	<%= link_to'Edit', edit_user_path(@user) %>
-<% end %>
+<div class="container-fluid" style="background-color: yellow;">
+	<div class="row">
+		<div class="col-md-6" style="background-color: red;">
+			<div class="col-md-3">
+				<%= attachment_image_tag @user, :image, :fill, 100, 100, format: 'jpg' %><br>
+			</div>
+			<div class="col-md-5">
+				<span style="font-size: 20px;">名前</span><br>
+					<%= @user.name %><br>
+				<span style="font-size: 20px;">自己紹介</span><br>
+					<%= @user.introduction %><br>
+				<span style="font-size: 20px;">禁酒歴</span><br>
+					<%= @user.history %><br>
+				<span style="font-size: 20px;">好きなお酒</span><br>
+					<%= @user.favorite_alcohol %><br>
+				<% if @user == current_user %>
+					<%= link_to'Edit', edit_user_path(@user), class:"glyphicon glyphicon-pencil" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
 
+<%# @tweets.each do |tweet| %>
+<%#= tweet.body %>
+<%# end %>

@@ -1,11 +1,11 @@
-<%= comments.count %>件コメント
+<%= comments.count %>件コメント<br>
 	<% comments.each do |comment| %>
 		<% unless comment.id.nil? %>
-			<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
+			<%= link_to "#{comment.user.name}さん", user_path(comment.user.id), style:"font-size: 15px;" %>
 			<%= comment.comment_body %>
 
 		<% if comment.user == current_user %>
-			<%= link_to 'コメントを削除', tweet_comment_path(@tweet.id, comment.id), method: :delete, remote: true %>
+			<%= link_to 'コメントを削除', tweet_comment_path(@tweet.id, comment.id), method: :delete, class:"glyphicon glyphicon-trash", remote: true %>
 		<% end %>
 
 		<% end %>

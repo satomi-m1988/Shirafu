@@ -1,10 +1,19 @@
-<table class="table">
-	<% @users.each do |user| %>
-		<tr>
-			<td><%= attachment_image_tag user, :image %></td>
-			<td><%= link_to user.name, user_path(user) %></td>
-			<td><%= render partial: 'relationships/create' , locals: { user: user } %></td>
-			<td><%= link_to'SHOW', user_path(user) %></td>
-		</tr>
-	<% end %>
-</table>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-8">
+
+			<table id="user">
+				<% @users.each do |user| %>
+				<tr id="user_tr">
+					<td id="user_td1"><%= attachment_image_tag user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %></td>
+					<td id="user_td2"><%= link_to user.name, user_path(user) %></td>
+					<td id="user_td3"><%= render partial: 'relationships/create' , locals: { user: user } %></td>
+					<td id="user_td4"><%= link_to'SHOW', user_path(user), class:"glyphicon glyphicon-user" %></td>
+				</tr>
+				<% end %>
+			</table>
+
+		</div>
+	</div>
+</div>

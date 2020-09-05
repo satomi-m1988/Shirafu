@@ -1,8 +1,21 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6" id="tweet_show1">
+			<div id="tweet_item">
+				<%= attachment_image_tag @tweet.user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
+				<%= @tweet.user.name %><br>
+				<%= @tweet.body %>
+			</div>
 
-<%= @tweet.user.name %>
-<%= @tweet.body %>
-
-<div id="comments_area">
-<%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
-<%= render partial: 'comments/form', locals: { comment: @comment, tweet: @tweet } %><!--コメント入力フォームの部分テンプレート -->
+			<div id="tweet_show_box">
+				<div id="tweet_item">
+				<div id="comments_area"><!-- 非同期ファイルターゲットのdiv -->
+					<%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
+					<%= render partial: 'comments/form', locals: { comment: @comment, tweet: @tweet } %><!--コメント入力フォームの部分テンプレート -->
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6" id="tweet_show2"></div>
+	</div>
 </div>

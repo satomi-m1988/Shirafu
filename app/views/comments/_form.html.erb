@@ -1,6 +1,8 @@
 <% if user_signed_in? %>
 	<%= form_with model: [@tweet, @comment] do |f| %>
-		<%= f.text_area :comment_body %>
-		<%= f.submit "Shirafu Comment" %>
+			<%= f.text_area :comment_body, style:"width: 400px; height: 100px;" %><br>
+		<div style="text-align: right;">
+			<%= f.submit "Shirafu Comment", class:"btn btn-primary" %>
+		</div>
 	<% end %>
 <% end %>

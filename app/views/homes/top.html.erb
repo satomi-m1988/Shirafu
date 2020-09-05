@@ -1,55 +1,46 @@
-
+<!-- ここから -->
 <div id="site_box1">
 	<div id="site_name">
 		<span class="test">Shirafu</span>
 	</div>
 </div>
+<!-- ここまでscssファイルでレイアウト -->
 
-<div id="site_box2">
-	<div id="attribute_title_box">
-		<h2 id="attribute_title">Shirafu is thinking</h2>
-	</div>
-	<div id="attribute_item_box">
-		<p id="attribute_item1">成人してから365日お酒を呑んでいた私<br>
-		あるきっかけでお酒を辞める決意をし、禁酒に踏み切る<br>
-		1日の〆は缶ビールをプシュッと空けることでリセットしていた日々<br>
-		休みの日には時間があれば昼から呑む<br>
-		それも楽しい。それも良かった。だけど、呑まない時間も悪くない。<br>
-		禁酒して初めて気付いた事が本当にたくさん！<br>
-		そう考えられるようになったのは禁酒したから。<br>
-		そしてお酒と離れてみて改めてお酒の美味しさ、誰かと呑める楽しさを実感した。<br>
-		お酒を呑む人も呑まない人もみんなで楽しくお酒とお付き合い出来たらいいな。<br>
-		そんな思いを込めて。
-		</p>
-	</div>
-</div>
-
-<div id="site_box3">
-	<div id="attribute_title_box">
-		<h2 id="attribute_title">What can we Shirafu?</h2>
-	</div>
-	<div id="attribute_item_box">
-		<ul id="attribute_item2">
-			<li>Shirafu 報告</li>
-			<li>Shirafu 検索</li>
-			<li>Shirafu フォロー</li>
-			<li>Shirafu いいね</li>
-			<li>Shirafu コメント</li>
-		</ul>
-	</div>
-</div>
-
-<div id="site_box4">
-	<div id="site_into_name">
-		<h2 id="attribute_title">Let's start Shirafu!!</h2>
-	</div>
-
-	<div id="button_group">
-		<div id="button">
-			<%= link_to "Shirafu Sign up", new_user_registration_path %>
-		</div>
-		<div id="button">
-			<%= link_to "Shirafu Log in", new_user_session_path %>
+<!-- box1ここから -->
+<div class="container-fluid" style="background-color: yellow; height: 600px;">
+	<div class="row">
+		<div class="col-md-6" style="background-color: red; height: 600px;">
 		</div>
 	</div>
 </div>
+<!-- ここまで -->
+
+<!-- box2ここから -->
+<div class="container-fluid" style="background-color: red; height: 600px;">
+	<div class="row">
+		<div class="col-md-6" style="background-color: blue; height: 600px;">
+		</div>
+	</div>
+</div>
+<!-- ここまで -->
+
+<!-- box3ここから -->
+<div class="container-fluid" style="height: 800px;" id="image">
+</div>
+<!-- ここまで -->
+
+<!-- box4ここから -->
+<div class="container-fluid" style="background-color: #ffd700; height: 500px;">
+	<div class="row" style="height: 200px;">
+		<div class="col-md-3" style="height: 200px;">
+		</div>
+		<div class="col-md-6" style="padding-top: 100px; text-align: center;">
+			<h1 style="font-size: 60px;">Let's start Shirafu!!</h1>
+			<%= link_to "Sign up", new_user_registration_path, class:"btn btn-primary dropdown-toggle", style:"font-size: 30px; width: 500px; height: 50px; margin-top: 10px;" %><br>
+			<%= link_to "Log in", new_user_session_path, class:"btn btn-primary dropdown-toggle", style:"font-size: 30px; width: 500px; height: 50px; margin-top: 10px;" %>
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+</div>
+<!-- ここまで -->

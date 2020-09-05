@@ -2,5 +2,70 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* -----ツイートnewページ----- */
+#image_newtweet {
+	height: 700px;
+	background-image: url(1809057_l.jpg);
+	background-size: cover;
+}
+/* ----------------------- */
+
+/* -----ツイートshowページ----- */
+#tweet_show1 {
+	/* background-color: red; */
+	height: 700px;
+}
+
+#tweet_show2 {
+	background-color: blue;
+	height: 700px;
+}
+
+#tweet_item {
+	/* background-color: yellow; */
+	/* border: solid 2px; */
+	/* border-color: #EEEEEE; */
+	height: 150px;
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 30px;
+	margin-top: 70px;
+}
+/* ----------------------- */
 
 
+/* -----ツイートindexページ----- */
+#tweet {
+	/* background-color: red; */
+}
+
+ #tweettr {
+	/* background-color: orange; */
+	height: 100px;
+}
+
+#index_tweet_name {
+	/* background-color: yellow; */
+	width: 200px;
+}
+
+#index_tweet {
+	/* background-color: blue; */
+	height: 100px;
+}
+/* ----------------------- */
+
+
+/* -----ツイートhashtagページ----- */
+#hashtag_td1 {
+	/* background-color: orange; */
+}
+#hashtag_td2 {
+	/* background-color: yellow; */
+	width: 150px;
+}
+#hashtag_td3 {
+	/* background-color: blue; */
+}
+
+/* ----------------------- */

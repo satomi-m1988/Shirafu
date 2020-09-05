@@ -1,14 +1,29 @@
-<%= form_tag(tweets_hashtag_path, method: :get) do %>
-	<%= label_tag(:tag_name, "#タグで探す") %>
-	<%= text_field_tag(:tag_name) %>
-	<%= submit_tag("Search") %>
-<% end %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-7">
+			<%= form_tag(tweets_hashtag_path, method: :get) do %>
+				<div style="font-size: 18px; text-align: ceneter; padding-top: 10px;">
+					<%= label_tag(:tag_name, "#タグで探す") %>
+					<%= text_field_tag(:tag_name)%>
+					<!-- <input type="text" class="form-control" id="InputText" placeholder="#タグで探す"> -->
+					<div style="text-align: right;">
+						<%= submit_tag"Search", class:("btn btn-primary dropdown-toggle") %>
+					</div>
+				</div>
 
-<table class="table">
-	<% @tweets.each do |tweet| %>
-		<tr>
-			<td><%= link_to tweet.user.name, user_path(tweet.user) %></td>
-			<td><%= tweet.body %></td>
-		</tr>
-	<% end %>
-</table>
+			<% end %>
+
+			<table>
+				<% @tweets.each do |tweet| %>
+					<tr id="hashtag_tr">
+						<td id="hashtag_td1"><%= attachment_image_tag tweet.user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %></td>
+						<td id="hashtag_td2"><%= link_to tweet.user.name, user_path(tweet.user) %></td>
+						<td id="hashtag_td3"><%= tweet.body %></td>
+					</tr>
+				<% end %>
+			</table>
+
+		</div>
+	</div>
+</div>

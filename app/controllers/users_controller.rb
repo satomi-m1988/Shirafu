@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
+
+  before_action :authenticate_user!
   def index
     @users = User.all
   end
 
   def show
     @user = User.find(params[:id])
+    # @tweets = Tweet.find_by(params[:id])
   end
 
   def edit
@@ -25,6 +28,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :image, :introduction, :history, :favorite_alcohol, :adult)
+    params.require(:user).permit(:name, :image, :introduction, :history, :favorite_alcohol)
   end
 end
