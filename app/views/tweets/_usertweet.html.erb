@@ -1,0 +1,22 @@
+<table style="background-color: blue;">
+
+	<tr style="background-color: orange;">
+		<td style="font-size: 20px;">
+			<%= @user.name %>さんのTweet
+		</td>
+	</tr>
+
+	<% tweets.each do |tweet| %>
+	<tr style="background-color: red;">
+		<td style="height: 50px;">
+			<%= tweet.body %>
+		</td>
+		<br>
+		<td>
+			<%= l tweet.created_at %>
+		</td>
+		<br>
+	</tr>
+	<% end %>
+
+</table>

@@ -7,7 +7,6 @@ class TweetsController < ApplicationController
 	end
 
 	def create
-		#@tweet = Tweet.create(tweet_params)
 		@tweet = Tweet.new(tweet_params)
 		@tweet.user_id = current_user.id
 		@tweet.save
@@ -15,7 +14,7 @@ class TweetsController < ApplicationController
 	end
 
 	def index
-		@tweets = Tweet.all.page(params[:page]).per(6)
+		@tweets = Tweet.all.page(params[:page]).per(5)
 	end
 
 	def hashtag
@@ -23,7 +22,7 @@ class TweetsController < ApplicationController
 		if  @tag.present?
 			@tweets = @tag.tweets
 		else
-			@tweets = Tweet.all.page(params[:page]).per(8)
+			@tweets = Tweet.all.page(params[:page]).per(7)
 		end
 	end
 

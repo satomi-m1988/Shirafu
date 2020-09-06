@@ -1,14 +1,14 @@
-<div class="container-fluid">
+<div class="container-fluid" style="height: 600px;">
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-7">
 			<%= form_tag(tweets_hashtag_path, method: :get) do %>
 				<div style="font-size: 18px; text-align: ceneter; padding-top: 10px;">
 					<%= label_tag(:tag_name, "#タグで探す") %>
-					<%= text_field_tag(:tag_name)%>
+					<%= text_field_tag(:tag_name) %>
 					<!-- <input type="text" class="form-control" id="InputText" placeholder="#タグで探す"> -->
 					<div style="text-align: right;">
-						<%= submit_tag"Search", class:("btn btn-primary dropdown-toggle") %>
+						<%= submit_tag"Search", class:"btn btn-primary", style:"width: 200px;" %>
 					</div>
 				</div>
 

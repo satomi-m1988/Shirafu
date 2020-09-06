@@ -1,18 +1,40 @@
-
-<%= form_for(@user) do |f| %>
-	<%= f.attachment_field :image %>
-	<br>
-	<%= f.label :名前 %>
-	<%= f.text_field :name %>
-	<br>
-	<%= f.label :自己紹介 %>
-	<%= f.text_area :introduction %>
-	<br>
-	<%= f.label :禁酒歴 %>
-	<%= f.text_field :history %>
-	<br>
-	<%= f.label :好きなお酒 %>
-	<%= f.text_area :favorite_alcohol %>
-	<br>
-	<%= f.submit 'Shirafer Update' %>
-<% end %>
+<div class="container-fluid" style="height: 600px;">
+	<div class="row">
+		<div class="col-md-6" style="background-color: red; height: 600px;"></div>
+		<div class="col-md-6" style="padding-top: 100px;">
+			<%= form_for(@user) do |f| %>
+				<div style="background-color: green; padding-left: 200px;">
+					<div>
+						<%= f.attachment_field :image %>
+					</div>
+					<br>
+					<div style="font-size: 18px;">
+						<%= f.label :名前　　　 %>
+					</div>
+					<div>
+						<%= f.text_field :name, style:"width: 50%; height: 50px;" %>
+					</div>
+					<br>
+					<div style="font-size: 18px;">
+						<%= f.label :自己紹介　 %>
+					</div>
+						<%= f.text_area :introduction, style:"width: 50%; height: 100px;" %>
+					<br>
+					<div style="font-size: 18px;">
+						<%= f.label :禁酒歴　　 %>
+					</div>
+						<%= f.text_field :history, style:"width: 50%; height: 50px;" %>
+					<br>
+					<div style="font-size: 18px;">
+						<%= f.label :好きなお酒 %>
+					</div>
+						<%= f.text_area :favorite_alcohol, style:"width: 50%; height: 70px;" %>
+					<br>
+					<div style="text-align: center;">
+						<%= f.submit 'Update', class: "btn btn-primary", style:"width: 200px;" %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
