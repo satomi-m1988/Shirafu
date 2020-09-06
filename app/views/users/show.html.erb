@@ -1,39 +1,39 @@
-<div class="container-fluid" style="background-color: yellow; height: 600px;">
+<div class="container-fluid" style="height: 600px;">
 	<div class="row">
-		<div class="col-md-6" style="background-color: red; height: 600px;">
-			<div class="col-md-5" style="background-color: blue;">
+		<div class="col-md-6" style="height: 600px;">
+			<div class="col-md-5" style=" border: 1px solid #333333; margin-top: 20px;">
 				<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg' %><br>
 			</div>
-			<div class="col-md-7" style="background-color: #FFCCFF; padding-top: 100px;">
-				<span style="font-size: 18px; background-color: green;">名前</span><br>
-					<div style="background-color: orange; height: 50px;">
+			<div class="col-md-7" style=" margin-top: 100px;">
+				<u style="font-size: 18px;">名前</u><br>
+					<div style="height: 50px;">
 						<%= @user.name %>
 					</div>
 					<br>
-				<span style="font-size: 18px; background-color: green;">自己紹介</span><br>
-					<div style="background-color: orange; height: 100px;">
+				<u style="font-size: 18px;">自己紹介</u><br>
+					<div style="height: 100px;">
 						<%= @user.introduction %>
 					</div>
 					<br>
-				<span style="font-size: 18px; background-color: green;">禁酒歴</span><br>
-					<div style="background-color: orange; height: 50px;">
+				<u style="font-size: 18px;">禁酒歴</u><br>
+					<div style="height: 50px;">
 						<%= @user.history %>
 					</div>
 					<br>
-				<span style="font-size: 18px; background-color: green;">好きなお酒</span><br>
-					<div style="background-color: orange; height: 50px;">
+				<u style="font-size: 18px;">好きなお酒</u><br>
+					<div style="height: 50px;">
 						<%= @user.favorite_alcohol %>
 					</div>
 					<br>
 				<% if @user == current_user %>
-				<div style="background-color: orange; text-align: center;">
+				<div style="text-align: center;">
 					<%= link_to'Edit', edit_user_path(@user), class:"btn btn-primary", style:"width: 200px;" %>
 				</div>
 				<% end %>
 			</div>
 		</div>
 
-		<div class="col-md-6" style="background-color: green; height: 600px;">
+		<div class="col-md-6" style="height: 600px;">
 			<div class="col-md-12">
 				<%= render partial: 'tweets/usertweet' , locals: { tweets: @tweets } %>
 			</div>

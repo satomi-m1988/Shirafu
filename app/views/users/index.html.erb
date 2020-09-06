@@ -3,13 +3,13 @@
 		<div class="col-md-3"></div>
 		<div class="col-md-8">
 
-			<table id="user">
+			<table>
 				<% @users.each do |user| %>
-				<tr id="user_tr">
-					<td id="user_td1"><%= attachment_image_tag user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %></td>
-					<td id="user_td2"><%= link_to user.name, user_path(user) %></td>
-					<td id="user_td3"><%= render partial: 'relationships/create' , locals: { user: user } %></td>
-					<td id="user_td4"><%= link_to'SHOW', user_path(user), class:"glyphicon glyphicon-user" %></td>
+				<tr>
+					<td><%= attachment_image_tag user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg", size:'90x90' %></td>
+					<td style="padding-left: 10px; width: 200px;"><%= link_to user.name, user_path(user) %></td>
+					<td style="width: 200px;"><%= render partial: 'relationships/create' , locals: { user: user } %></td>
+					<td style="width: 200px;"><%= link_to'SHOW', user_path(user), class:"glyphicon glyphicon-user" %></td>
 				</tr>
 				<% end %>
 			</table>

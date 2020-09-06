@@ -20,9 +20,9 @@ class TweetsController < ApplicationController
 	def hashtag
 		@tag = Tag.find_by(tag_name: params[:tag_name])
 		if  @tag.present?
-			@tweets = @tag.tweets
+			@tweets = @tag.tweets.page(params[:page]).per(6)
 		else
-			@tweets = Tweet.all.page(params[:page]).per(7)
+			@tweets = Tweet.all.page(params[:page]).per(6)
 		end
 	end
 
