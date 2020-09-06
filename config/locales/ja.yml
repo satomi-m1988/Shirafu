@@ -1,0 +1,11 @@
+ja:
+  errors:
+    messages:
+      not_saved: "必須項目に必ずご記入ください"
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        adult: "年齢確認欄"
