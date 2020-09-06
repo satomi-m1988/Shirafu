@@ -9,3 +9,6 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         adult: "年齢確認欄"
+  time:
+    formats:
+      default: "%Y/%m/%d"

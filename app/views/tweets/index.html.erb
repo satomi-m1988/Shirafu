@@ -12,7 +12,7 @@
 						</td>
 						<td id="index_tweet">
 							<%= tweet.body %><br>
-							<%= tweet.created_at %>
+							<%= l tweet.created_at %>
 							<div id="favorites_buttons_<%= tweet.id %>">
 								<%= render partial: 'favorites/favorite', locals: { tweet: tweet } %>
 							</div>
