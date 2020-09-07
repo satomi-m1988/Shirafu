@@ -17,25 +17,10 @@
 #site_box1 {
 	height: 800px;
 	width: auto;
+	background-image: url(drinks-2578446_1920.jpg);
+	background-size: cover;
+	/* opacity: 0.5; */
 }
-
-/* #site_box2 {
-	height: 800px;
-	width: auto;
-	background-color: yellow;
-} */
-
-/* #site_box3 {
-	height: 800px;
-	width: auto;
-	background-color: blue;
-} */
-
-/* #site_box4 {
-	height: 800px;
-	width: auto;
-	background-color: orange;
-} */
 
 /*-----ここからサイト名前のアニメーション記述-----*/
  #site_name {
@@ -53,7 +38,7 @@
 		color: #f00;
 	}
 	50% {
-		color: #4caf50;
+		color: #ffd700;
 	}
 	100% {
 		color: #2196F3;
@@ -61,46 +46,14 @@
 }
 /*-----ここまで-----*/
 
-/* #attribute_title_box {
-	float: left;
-} */
 
-/* #attribute_item_box {
-	padding-top: 400px;
-	padding-left: 10px;
-	text-align: center;
-	overflow:hidden;
-} */
+#video-box {
+  height: 100vh;
+  z-index: 1;
 
-/* #attribute_title {
-	font-size: 40px;
-} */
-
-/* #attribute_item1 {
-	font-size: 18px;
-} */
-
-/* #attribute_item2 {
-	font-size: 40px;
-} */
-
-/* #button {
-	height: 300px;
-	width: 300px;
-	border-radius: 50%;
-	background-color: red;
-	text-align: center;
-	line-height: 300px;
-	font-size: 40px;
-	float: left;
-} */
-
-#image {
-	background-image: url(drinks-2578446_1920.jpg);
-	background-size: cover;
-}
-
-.content__box__video {
-	height: 800px;
-	width: 600px;
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

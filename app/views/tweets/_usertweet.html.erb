@@ -1,14 +1,14 @@
 <table>
 	<tr>
-		<td style="font-size: 20px;">
-			<%= @user.name %>さんのTweet
+		<td style="font-size: 25px;">
+			<b><%= @user.name %>さんのつぶやき</b>
 		</td>
 	</tr>
 
 	<% tweets.each do |tweet| %>
 
 	<tr>
-		<td style="height: 60px; width: 90%;">
+		<td style="height: 60px;">
 			<%= tweet.body %>
 		</td>
 		<br>

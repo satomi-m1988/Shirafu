@@ -1,42 +1,30 @@
-<div class="container-fluid" style="height: 600px;">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-6" style="height: 600px;">
-			<div class="col-md-5" style="margin-top: 20px;">
-				<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg', fallback: "no_image.jpg", size:'200x200'  %><br>
-			</div>
-			<div class="col-md-7" style=" margin-top: 100px;">
+		<div class="col-md-2" style="height: 600px; background-color: #ff9234;"></div>
+		<div class="col-md-4" style="height: 600px; text-align: right;">
+			<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg', fallback: "no_image.jpg", size:'200x200'  %><br>
 				<u style="font-size: 18px;">名前</u><br>
-					<div style="height: 50px;">
-						<%= @user.name %>
-					</div>
-					<br>
+				<%= @user.name %>
+				<br>
 				<u style="font-size: 18px;">自己紹介</u><br>
-					<div style="height: 100px;">
-						<%= @user.introduction %>
-					</div>
-					<br>
+				<%= @user.introduction %>
+				<br>
 				<u style="font-size: 18px;">禁酒歴</u><br>
-					<div style="height: 50px;">
-						<%= @user.history %>
-					</div>
-					<br>
+				<%= @user.history %>
+				<br>
 				<u style="font-size: 18px;">好きなお酒</u><br>
-					<div style="height: 50px;">
-						<%= @user.favorite_alcohol %>
-					</div>
-					<br>
+				<%= @user.favorite_alcohol %>
+				<br>
 				<% if @user == current_user %>
-				<div style="text-align: center;">
+				<div style="text-align: right;">
 					<%= link_to'Edit', edit_user_path(@user), class:"btn btn-primary", style:"width: 200px;" %>
 				</div>
-				<% end %>
-			</div>
+			<% end %>
 		</div>
 
-		<div class="col-md-6" style="height: 600px;">
-			<div class="col-md-12">
-				<%= render partial: 'tweets/usertweet' , locals: { tweets: @tweets } %>
-			</div>
+		<div class="col-md-4" style="height: 600px;">
+			<%= render partial: 'tweets/usertweet' , locals: { tweets: @tweets } %>
 		</div>
+		<div class="col-md-2" style="height: 600px; background-color: #ff9234;"></div>
 	</div>
 </div>

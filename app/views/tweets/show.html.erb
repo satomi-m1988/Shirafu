@@ -1,6 +1,7 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-6" id="tweet_show1">
+		<div class="col-md-3" style="height: 600px; background-color: #ff9234;"></div>
+		<div class="col-md-6" style="height: 600px;">
 			<div id="tweet_item">
 				<%= attachment_image_tag @tweet.user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
 				<%= @tweet.user.name %><br>
@@ -16,6 +17,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6" id="tweet_show2"></div>
+		<div class="col-md-3" style="height: 600px; background-color: #1eb2a6;"></div>
 	</div>
 </div>

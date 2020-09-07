@@ -1,42 +1,70 @@
-<!-- ここから -->
+<!-- エリア１ -->
 <div id="site_box1">
 	<div id="site_name">
 		<span class="test">Shirafu</span>
 	</div>
 </div>
-<!-- ここまでscssファイルでレイアウト -->
 
-<!-- box1ここから -->
-<div class="container-fluid" style="background-color: yellow; height: 600px;">
+
+<!-- エリア２ -->
+<div class="container-fluid" style="background-color: white; height: 600px;">
 	<div class="row">
-		<div class="col-md-6" style="background-color: red; height: 600px;">
+		<div class="col-md-6" style="background-color: #3282b8; height: 600px;"></div>
+		<div style="font-size: 23px; padding-top: 40px; background-color: #ffd700; height: 600px;">
+			<b style="font-size: 70px; color: orange;"><b style="color: red;">Shirafu</b> is thinking</b><br>
+			<p>
+			Shirafuは禁酒を頑張っている人を応援するSNS<br>
+			<br>
+			禁酒して気づいたこと<br>
+			良いことや、やっぱりお酒を飲みたいと思うこと<br>
+			禁酒について語り合い、励まし合う場である。<br>
+			<br>
+			お酒と距離を取った今だからこそ話せる事があるはず。<br>
+			<br>
+			お酒を飲む人も飲まない人も<br>
+			頑張って禁酒に励んでいる人も<br>
+			みんなで楽しくお酒とお付き合い出来たらいいよね<br>
+			そんな気持ちを込めて<br>
+			</p>
 		</div>
 	</div>
 </div>
-<!-- ここまで -->
 
-<!-- box2ここから -->
-<div class="container-fluid" style="background-color: red; height: 600px;">
+<!-- エリア３ -->
+<div class="container-fluid" style="background-color: #1eb2a6; height: 600px;">
 	<div class="row">
-		<div class="col-md-6" style="background-color: blue; height: 600px;">
+		<div class="col-md-6" style="background-color: #ffd700; height: 600px; padding-top: 20px;">
+			<b style="font-size: 70px; color: orange;">What we can<b style="color: red;">Shirafu</b>?</b>
+			<ul style="font-size: 23px; list-style: none;">
+				<li><b>Shirafuつぶやき</b></li>
+				<p style="padding-left: 10px;">日常のあらゆる禁酒についての事を自由につぶやけます</p>
+				<li><b>Shirafuタグ検索</b></li>
+				<p style="padding-left: 10px;">ハッシュタグで気になるテーマについて検索出来ます</p>
+				<li><b>Shirafuいいね</b></li>
+				<p style="padding-left: 10px;">Shirafuつぶやきにいいねを送ることができます</p>
+				<li><b>Shirafuコメント</b></li>
+				<p style="padding-left: 10px;">Shirafuの皆さんにコメントできます</p>
+				<li><b>Shiraferフォロー</b></li>
+				<p style="padding-left: 10px;">気になるShiraferさんがいたらフォローできます</p>
+			</ul>
 		</div>
+		<div class="col-md-6"></div>
 	</div>
 </div>
-<!-- ここまで -->
 
-<!-- box3ここから -->
-<div class="container-fluid" style="height: 800px;" id="image">
+<!-- エリア４(動画部分) -->
+<div id="video-box">
+	<%= video_tag("/videos/Pexels Videos 2345459.mp4", autoplay: true, loop: true, muted: true, class: 'content__box__video') %>
 </div>
-<!-- ここまで -->
 
-<!-- box4ここから(ログインいていたら表示させない) -->
+<!-- エリア５(ログインしていたら非表示) -->
 <% unless user_signed_in? %>
-<div class="container-fluid" style="background-color: #ffd700; height: 500px;">
+<div class="container-fluid" style="background-color: #ffd700; height: 400px;">
 	<div class="row" style="height: 200px;">
 		<div class="col-md-3" style="height: 200px;">
 		</div>
 		<div class="col-md-6" style="padding-top: 100px; text-align: center;">
-			<h1 style="font-size: 60px;">Let's start Shirafu!!</h1>
+			<h1 style="font-size: 60px; color: green;">Let's start Shirafu!!</h1>
 			<%= link_to "Sign up", new_user_registration_path, class:"btn btn-primary dropdown-toggle", style:"font-size: 30px; width: 500px; height: 50px; margin-top: 10px;" %><br>
 			<%= link_to "Log in", new_user_session_path, class:"btn btn-primary dropdown-toggle", style:"font-size: 30px; width: 500px; height: 50px; margin-top: 10px;" %>
 		</div>
@@ -45,7 +73,3 @@
 	</div>
 </div>
 <% end %>
-<!-- ここまで -->
-<div id="video-box">
-	<%= video_tag("/videos/Pexels Videos 2345459.mp4", autoplay: true, loop: true, muted: true, class: 'content__box__video') %>
-</div>

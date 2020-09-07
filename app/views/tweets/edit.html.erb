@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-6", style="background-color: blue; height: 600px;"></div>
+		<div class="col-md-3", style="background-color: #ff9234; height: 600px;"></div>
 		<div class="col-md-6", style="padding-top: 200px; height: 600px;">
 			<%= form_for(@tweet) do |f| %>
 			<%= f.text_area :body, style:"width: 400px; height: 100px;" %>
@@ -8,5 +8,6 @@
 			<% end %>
 			<%= link_to 'Back' , tweets_path %>
 		</div>
+		<div class="col-md-3", style="background-color: #1eb2a6; height: 600px;"></div>
 	</div>
 </div>

@@ -1,7 +1,8 @@
-<div class="container-fluid" style="height: 600px;">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-7">
+		<div class="col-md-2" style="background-color: #1eb2a6; height: 600px"></div>
+
+		<div class="col-md-8">
 			<%= form_tag(tweets_hashtag_path, method: :get) do %>
 				<div style="font-size: 18px; text-align: ceneter; padding-top: 10px;">
 					<div><%= label_tag(:tag_name, "#タグで探す") %></div>
@@ -16,11 +17,11 @@
 
 			<table>
 				<% @tweets.each do |tweet| %>
-					<tr id="hashtag_tr">
+					<tr>
 						<td>
 							<%= attachment_image_tag tweet.user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg", size:'70x70' %>
 						</td>
-						<td>
+						<td style="width: 120px;">
 							<%= link_to tweet.user.name, user_path(tweet.user) %>
 						</td>
 						<td style="padding-left: 10px;">
@@ -30,7 +31,8 @@
 				<% end %>
 				<%= paginate @tweets %>
 			</table>
-
 		</div>
+
+		<div class="col-md-2" style="background-color: #1eb2a6; height: 600px"></div>
 	</div>
 </div>
