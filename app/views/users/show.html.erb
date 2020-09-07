@@ -1,8 +1,8 @@
 <div class="container-fluid" style="height: 600px;">
 	<div class="row">
 		<div class="col-md-6" style="height: 600px;">
-			<div class="col-md-5" style=" border: 1px solid #333333; margin-top: 20px;">
-				<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg' %><br>
+			<div class="col-md-5" style="margin-top: 20px;">
+				<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg', fallback: "no_image.jpg", size:'200x200'  %><br>
 			</div>
 			<div class="col-md-7" style=" margin-top: 100px;">
 				<u style="font-size: 18px;">名前</u><br>
