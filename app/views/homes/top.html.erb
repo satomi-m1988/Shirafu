@@ -29,7 +29,8 @@
 </div>
 <!-- ここまで -->
 
-<!-- box4ここから -->
+<!-- box4ここから(ログインいていたら表示させない) -->
+<% unless user_signed_in? %>
 <div class="container-fluid" style="background-color: #ffd700; height: 500px;">
 	<div class="row" style="height: 200px;">
 		<div class="col-md-3" style="height: 200px;">
@@ -43,6 +44,8 @@
 		</div>
 	</div>
 </div>
+<% end %>
 <!-- ここまで -->
-
-<%= video_tag("/videos/Pexels Videos 2345459.mp4", autoplay: true, loop: true, muted: true, class: 'content__box__video') %>
+<div id="video-box">
+	<%= video_tag("/videos/Pexels Videos 2345459.mp4", autoplay: true, loop: true, muted: true, class: 'content__box__video') %>
+</div>
