@@ -2,22 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 #site_box1 {
 	height: 800px;
 	width: auto;
-	background-image: url(drinks-2578446_1920.jpg);
+	background-image: image-url("drinks-2578446_1920.jpg");
 	background-size: cover;
 	/* opacity: 0.5; */
 }
