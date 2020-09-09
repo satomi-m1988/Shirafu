@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, on: :create
-  validates :adult, presence: true, on: :create
+  validates :adult, acceptance: true, on: :create
+  # チェックボックスが空欄だとバリデーションが実行される
 
   has_many :tweets, dependent: :destroy
   has_many :favorites, dependent: :destroy
