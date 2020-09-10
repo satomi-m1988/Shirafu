@@ -1,15 +1,15 @@
 <div class="container-fluid" style="height: 600px;">
 	<div class="row">
-		<div class="col-md-2" style="background-color: #1eb2a6; height: 600px;"></div>
-		<div class="col-md-8">
+		<div class="col-xs-1" style="background-color: #1eb2a6; height: 600px;"></div>
+		<div class="col-xs-10">
 			<table>
 				<tr>
 					<% @tweets.each do |tweet| %>
-						<td style="width: 200px;">
+						<td style="width: 30%;">
 							<%= attachment_image_tag tweet.user, :image, :fill, 80, 80, format: 'jpeg', fallback: "no_image.jpg", size:'80x80' %>
 							<%= link_to tweet.user.name, user_path(tweet.user) %>
 						</td>
-						<td style="padding-bottom: 10px;">
+						<td style="padding-bottom: 10px; width: 60%;">
 							<%= tweet.body %><br>
 							<%= l tweet.created_at %>
 							<div id="favorites_buttons_<%= tweet.id %>">
@@ -29,6 +29,6 @@
 					<%= paginate @tweets %>
 			</table>
 		</div>
-		<div class="col-md-2" style="background-color: #1eb2a6; height: 600px;"></div>
+		<div class="col-xs-1" style="background-color: #1eb2a6; height: 600px;"></div>
 	</div>
 </div>

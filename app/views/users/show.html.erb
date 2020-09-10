@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2" style="height: 600px; background-color: #ff9234;"></div>
-		<div class="col-md-4" style="height: 600px; text-align: right;">
+		<div class="col-xs-2" style="height: 600px; background-color: #ff9234;"></div>
+		<div class="col-xs-4" style="height: 600px; text-align: right;">
 			<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg', fallback: "no_image.jpg", size:'200x200'  %><br>
 				<u style="font-size: 18px;">名前</u><br>
 					<div style=" padding: 5px;"><%= @user.name %></div>
@@ -22,9 +22,9 @@
 			<% end %>
 		</div>
 
-		<div class="col-md-4" style="height: 600px;">
+		<div class="col-xs-4" style="height: 600px;">
 			<%= render partial: 'tweets/usertweet' , locals: { tweets: @tweets } %>
 		</div>
-		<div class="col-md-2" style="height: 600px; background-color: #ff9234;"></div>
+		<div class="col-xs-2" style="height: 600px; background-color: #ff9234;"></div>
 	</div>
 </div>
