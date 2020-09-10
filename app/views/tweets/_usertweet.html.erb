@@ -1,6 +1,6 @@
 <table>
 	<tr>
-		<td style="font-size: 25px;">
+		<td style="font-size: 25px; color: #808080;">
 			<b><%= @user.name %>さんのつぶやき</b>
 		</td>
 	</tr>
@@ -9,7 +9,7 @@
 
 	<tr>
 		<td style="height: 60px;">
-			<%= tweet.body %>
+			<div style=" padding: 5px;"><%= tweet.body %></div>
 		</td>
 		<br>
 		<td>
@@ -17,6 +17,6 @@
 		</td>
 		<br>
 	</tr>
-
+	<%= paginate @tweets %>
 	<% end %>
 </table>

@@ -4,16 +4,16 @@
 		<div class="col-md-4" style="height: 600px; text-align: right;">
 			<%= attachment_image_tag @user, :image, :fill, 200, 200, format: 'jpg', fallback: "no_image.jpg", size:'200x200'  %><br>
 				<u style="font-size: 18px;">名前</u><br>
-				<%= @user.name %>
+					<div style=" padding: 5px;"><%= @user.name %></div>
 				<br>
 				<u style="font-size: 18px;">自己紹介</u><br>
-				<%= @user.introduction %>
+					<div style=" padding: 5px;"><%= @user.introduction %></div>
 				<br>
 				<u style="font-size: 18px;">禁酒歴</u><br>
-				<%= @user.history %>
+					<div style=" padding: 5px;"><%= @user.history %></div>
 				<br>
 				<u style="font-size: 18px;">好きなお酒</u><br>
-				<%= @user.favorite_alcohol %>
+					<div style=" padding: 5px;"><%= @user.favorite_alcohol %></div>
 				<br>
 				<% if @user == current_user %>
 				<div style="text-align: right;">
