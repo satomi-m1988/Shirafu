@@ -2,36 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* -----ツイートnewページ----- */
 #image_newtweet {
 	height: 600px;
 	background-image: image-url("1809057_l.jpg");
 	background-size: cover;
 }
-/* ----------------------- */
-
-/* -----ツイートshowページ----- */
-
- #tweet_item {
-	height: 150px;
-	width: 50%;
-	margin: 0 auto;
-	padding-top: 30px;
-	margin-top: 70px;
-}
-/* ----------------------- */
-
-
-/* -----ツイートindexページ----- */
- #tweettr {
-	height: 100px;
-}
-
-#index_tweet_name {
-	width: 200px;
-}
-
-#index_tweet {
-	height: 100px;
-}
-/* ----------------------- */

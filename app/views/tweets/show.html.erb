@@ -2,18 +2,18 @@
 	<div class="row">
 		<div class="col-md-3" style="height: 600px; background-color: #ff9234;"></div>
 		<div class="col-md-6" style="height: 600px;">
-			<div id="tweet_item">
-				<%= attachment_image_tag @tweet.user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
-				<%= @tweet.user.name %><br>
-				<%= @tweet.body %>
+			<div style="padding: 20px;">
+					<%= attachment_image_tag @tweet.user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg" %>
+					<%= @tweet.user.name %><br>
+				<div style="padding-top: 10px;">
+					<%= @tweet.body %>
+				</div>
 			</div>
 
-			<div id="tweet_show_box">
-				<div id="tweet_item">
-				<div id="comments_area"><!-- 非同期ファイルターゲットのdiv -->
+			<div id="comments_area" style="padding: 20px;"><!-- 非同期ファイルターゲットのdiv -->
 					<%= render partial: 'comments/index', locals: { comments: @comments } %> <!--コメント表示の部分テンプレート -->
+				<div style="padding-top: 10px;">
 					<%= render partial: 'comments/form', locals: { comment: @comment, tweet: @tweet } %><!--コメント入力フォームの部分テンプレート -->
-				</div>
 				</div>
 			</div>
 		</div>

@@ -2,15 +2,14 @@
 	<div class="row">
 		<div class="col-md-2" style="background-color: #1eb2a6; height: 600px;"></div>
 		<div class="col-md-8">
-
-			<table id="tweet">
-				<tr id="tweettr">
+			<table>
+				<tr>
 					<% @tweets.each do |tweet| %>
-						<td id="index_tweet_name">
+						<td style="width: 200px;">
 							<%= attachment_image_tag tweet.user, :image, :fill, 80, 80, format: 'jpeg', fallback: "no_image.jpg", size:'80x80' %>
 							<%= link_to tweet.user.name, user_path(tweet.user) %>
 						</td>
-						<td id="index_tweet">
+						<td style="padding-bottom: 10px;">
 							<%= tweet.body %><br>
 							<%= l tweet.created_at %>
 							<div id="favorites_buttons_<%= tweet.id %>">
@@ -19,17 +18,16 @@
 							<%= link_to'コメントする', tweet_path(tweet.id), class:"glyphicon glyphicon-comment" %>
 						</td>
 
-					<td>
-						<% if tweet.user == current_user %>
-							<%= link_to'編集', edit_tweet_path(tweet.id), class:"glyphicon glyphicon-pencil" %>
-							<%= link_to "削除する", tweet_path(tweet), method: :delete, class:"glyphicon glyphicon-trash" %>
-						<% end %>
-					</td>
+						<td>
+							<% if tweet.user == current_user %>
+								<%= link_to'編集', edit_tweet_path(tweet.id), class:"glyphicon glyphicon-pencil" %>
+								<%= link_to "削除する", tweet_path(tweet), method: :delete, class:"glyphicon glyphicon-trash" %>
+							<% end %>
+						</td>
 				</tr>
 					<% end %>
-				<%= paginate @tweets %>
+					<%= paginate @tweets %>
 			</table>
-
 		</div>
 		<div class="col-md-2" style="background-color: #1eb2a6; height: 600px;"></div>
 	</div>

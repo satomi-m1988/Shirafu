@@ -4,15 +4,13 @@
 
 		<div class="col-md-8">
 			<%= form_tag(tweets_hashtag_path, method: :get) do %>
-				<div style="font-size: 18px; text-align: ceneter; padding-top: 10px;">
-					<div><%= label_tag(:tag_name, "#タグで探す") %></div>
-						 <%= text_field_tag(:tag_name) %>
-					<!-- <input type="text" class="form-control" id="InputText" placeholder="#タグで探す"> -->
+				<div style="font-size: 18px; text-align: ceneter; padding-top: 10px; color: #808080;">
+						<%= label_tag(:tag_name, "#タグで探す") %>
+						<%= text_field_tag(:tag_name) %>
 					<div style="text-align: right;">
 						<%= submit_tag"Search", class:"btn btn-primary", style:"width: 200px;" %>
 					</div>
 				</div>
-
 			<% end %>
 
 			<table>

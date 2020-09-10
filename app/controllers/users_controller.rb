@@ -24,8 +24,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def confirm
-  end
 
   private
   def user_params
