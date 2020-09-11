@@ -38,3 +38,10 @@ Rails 5.2.4.3
 * devise
 * 非同期通信(ajax)
 * タグ付け機能(DBにて実装)
+
+## 引用写真及び動画出典元
+* topページ写真:Pexels "https://www.pexels.com/ja-jp/search/drink/" Burstさん
+* topページ動画:Pexels "https://www.pexels.com/ja-jp/video/2345459/" Engin Akyurtさん
+* tweet新規投稿ページ写真:PhotoAC "https://www.photo-ac.com/main/detail/1809057?title=%E7%A6%81%E9%85%92&searchId=43387045" ちょこちょこさん<br>
+  ありがとうございました。
+
