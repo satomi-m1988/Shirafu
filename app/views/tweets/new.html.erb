@@ -6,6 +6,7 @@
 			<%= form_for(@tweet) do |f| %>
 				<%= f.text_area :body, style:"width: 80%; height: 100px;" %>
 				<%= f.submit 'Shirafuru', class:"btn btn-primary", style:"width: 200px;"%>
+				<%= notice %>
 			<% end %>
 		</div>
 	</div>
