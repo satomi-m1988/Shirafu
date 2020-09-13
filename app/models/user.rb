@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true, on: :create
+  validates :name, presence: true
   validates :adult, acceptance: true, on: :create
   # チェックボックスが空欄だとバリデーションが実行される
 

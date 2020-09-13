@@ -10,9 +10,9 @@ class TweetsController < ApplicationController
 		@tweet = Tweet.new(tweet_params)
 		@tweet.user_id = current_user.id
 		if @tweet.save
-		redirect_to tweets_path
+		   redirect_to tweets_path
 		else
-		render :new
+		   render :new
 		end
 	end
 
@@ -43,9 +43,9 @@ class TweetsController < ApplicationController
 	def update
 		@tweet = Tweet.find(params[:id])
 		if @tweet.update(tweet_params)
-			redirect_to tweets_path
+		   redirect_to tweets_path
 		else
-			render :edit
+		   render :edit
 		end
 	end
 
