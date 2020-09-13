@@ -7,14 +7,14 @@ before_action :authenticate_user!
   	@comment = @tweet.comments.build(comment_params)
   	@comment.user_id = current_user.id
   	@comment.save
-  	render :index #index.jsファイルを探しにいく記述
+    redirect_to tweet_path(params[:tweet_id])
   end
 
   def destroy
     @comment = Comment.find(params[:id])
     @tweet = Tweet.find(params[:tweet_id])
     @comment.destroy
-    render :index
+    redirect_to tweet_path(params[:tweet_id])
   end
 
   private
