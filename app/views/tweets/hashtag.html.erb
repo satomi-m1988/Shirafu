@@ -12,6 +12,12 @@
 					</div>
 				</div>
 			<% end %>
+				<div style="padding-bottom: 10px;">
+					<b>タグ一覧</b><br>
+						<% @tag_lists. shuffle. first(5). each do |tag| %>
+						<%= tag.tag_name %>
+						<% end %>
+				</div>
 
 			<table>
 				<% @tweets.each do |tweet| %>

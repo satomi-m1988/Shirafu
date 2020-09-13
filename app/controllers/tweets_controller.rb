@@ -18,7 +18,6 @@ class TweetsController < ApplicationController
 
 	def index
 		@tweets = Tweet.all.page(params[:page]).per(5).order(created_at: :desc)
-		# １ページ５件の表示・日付最新順
 	end
 
 	def hashtag
@@ -28,6 +27,7 @@ class TweetsController < ApplicationController
 		else
 			@tweets = Tweet.all.page(params[:page]).per(6).order(created_at: :desc)
 		end
+		@tag_lists = Tag.all
 	end
 
 	def show
